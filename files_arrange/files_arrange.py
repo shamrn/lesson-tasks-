@@ -51,15 +51,15 @@ class FilesArrange:
                 self.icons_arrange(path_icon, year, month)
 
     def check_path(self, year, month):
-        if os.path.exists(self.file_icon_arrange) == False:
+        if not os.path.exists(self.file_icon_arrange):
             os.mkdir(self.file_icon_arrange)
 
         arrange_path_year = os.path.join(self.file_icon_arrange, year)
-        if os.path.exists(arrange_path_year) == False:
+        if not os.path.exists(arrange_path_year):
             os.mkdir(arrange_path_year)
 
         arrange_path_month = os.path.join(arrange_path_year, month)
-        if os.path.exists(arrange_path_month) == False:
+        if not os.path.exists(arrange_path_month):
             os.mkdir(arrange_path_month)
 
     def icons_arrange(self, path_icon, year, month):
